@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/limeup-users/static/css/main.a4c4a23d.css",
+    "main.js": "/limeup-users/static/js/main.50e3a6b4.js",
+    "index.html": "/limeup-users/index.html",
+    "main.a4c4a23d.css.map": "/limeup-users/static/css/main.a4c4a23d.css.map",
+    "main.50e3a6b4.js.map": "/limeup-users/static/js/main.50e3a6b4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a4c4a23d.css",
+    "static/js/main.50e3a6b4.js"
+  ]
+}
