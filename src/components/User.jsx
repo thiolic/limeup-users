@@ -3,20 +3,25 @@ import { observer } from 'mobx-react-lite';
 
 import UserEidt from './UserEidt';
 
-const User = ({user}) => {
+const User = ({ user }) => {
 	const [editing, setEditing] = useState(false);
 
-	const handleDoubleClick = () => {
-		setEditing(true)
+	const handleDoubleClick = (e) => {
+		e.stopPropagation();
+		setEditing(true);
 	}
 
 	const handleSave = (name) => {
 		user.edit(name);
-        setEditing(false);
+		setEditing(false);
 	}
 
 	const handleRemoveUser = () => {
 		user.remove();
+	}
+
+	const handleBlockeUser = () => {
+		user.toggle();
 	}
 
 	return (
@@ -29,8 +34,11 @@ const User = ({user}) => {
 				/>
 			) : (
 				<>
-					<span onDoubleClick={handleDoubleClick} className="users__listitem-name">{user.name}</span>
-					<button onClick={handleRemoveUser} className="users__listitem-button">Remove</button>
+					<div className={`users__listitem-main ${user.blocked ? 'is-disabled' : ''}`}>
+						<span onDoubleClick={handleDoubleClick} className="users__listitem-name">{user.name}</span>
+						<button onClick={handleRemoveUser} className="users__listitem-button">Remove</button>
+					</div>
+					<button onClick={handleBlockeUser} className="users__listitem-button">Blocked</button>
 				</>
 			)}
 		</li>

@@ -53,6 +53,13 @@ code {
 	position: relative;
 }
 
+.users__listitem-main {
+	align-items: center;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+}
+
 .users__listitem-input {
 	background-color: var(--color-white);
 	border: 1px solid var(--primary-color);
@@ -125,4 +132,10 @@ code {
 .form__button:hover {
 	background-color: var(--secondary-color);
 	border-color: var(--secondary-color);
+}
+
+.is-disabled {
+	opacity: 0.35;
+	pointer-events: none;
+	user-select: none;
 }
