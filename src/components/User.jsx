@@ -20,7 +20,7 @@ const User = ({user}) => {
 	}
 
 	return (
-		<li >
+		<li className="users__listitem">
 			{editing ? (
 				<UserEidt
 					name={user.name}
@@ -28,10 +28,10 @@ const User = ({user}) => {
 					onSave={(name) => handleSave(name)}
 				/>
 			) : (
-				<div>
-					<span onDoubleClick={handleDoubleClick}>{user.name}</span>
-					<button onClick={handleRemoveUser}>Remove</button>
-				</div>
+				<>
+					<span onDoubleClick={handleDoubleClick} className="users__listitem-name">{user.name}</span>
+					<button onClick={handleRemoveUser} className="users__listitem-button">Remove</button>
+				</>
 			)}
 		</li>
 	)

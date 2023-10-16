@@ -23,9 +23,16 @@ const NewUser = () => {
 	}
 
 	return (
-		<form onSubmit={handleSubmit}>
-			<input onChange={handleChange} type="text" placeholder="Type name here..." required value={name} />
-			<button>Add new user</button>
+		<form onSubmit={handleSubmit} className="users__form form">
+			<input
+				className="form__input"
+				onChange={handleChange}
+				type="text"
+				placeholder="Type name here..."
+				required
+				value={name}
+			/>
+			<button className="form__button">Add new user</button>
 		</form>
 	)
 }

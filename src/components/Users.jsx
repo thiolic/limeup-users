@@ -9,12 +9,13 @@ const Users = () => {
 	const { users } = useUsersStore();
 
 	return (
-		<>
+		<section className="users">
+			<h1 className="users__title">List of users</h1>
 			<NewUser />
-			<ul>
+			<ul className="users__list">
 				{users.map((user) => <User key={user.id} user={user} />)}
 			</ul>
-		</>
+		</section>
 	)
 };
 

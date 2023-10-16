@@ -1,10 +1,12 @@
 import Users from './components/Users';
 
-import './App.css';
-
 const App = () => {
 	return (
-		<Users />
+		<div className="app">
+			<div className="app-container">
+				<Users />
+			</div>
+		</div>
 	);
 }
 

@@ -21,6 +21,7 @@ const UserEidt = ({ name, onSave }) => {
 
 	return (
 		<input
+			className="users__listitem-input"
 			type="text"
 			autoFocus={true}
 			value={editingName}
